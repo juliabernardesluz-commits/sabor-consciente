@@ -1,0 +1,176 @@
+/* ==========================================
+   1. RESET E CONFIGURAÇÕES GERAIS 
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+    --verde-escuro: #1b4332;
+    --verde-folha: #40916c;
+    --palha: #f4f9f4;
+    --texto: #2d3748;
+    --detalhe: #d8f3dc;
+}
+
+body {
+    background-color: #ffffff;
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+/* ==========================================
+   2. CABEÇALHO E MENU DE NAVEGAÇÃO
+   ========================================== */
+header {
+    background-color: var(--verde-escuro);
+    padding: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #b7e4c7;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.menu a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.menu a:hover {
+    color: #b7e4c7;
+}
+
+/* ==========================================
+   3. HERO BANNER (DESTAQUE PRINCIPAL)
+   ========================================== */
+.hero {
+    background: linear-gradient(rgba(27, 67, 50, 0.85), rgba(40, 145, 108, 0.7)), 
+                url('https://images.unsplash.com/photo-1488459718432-36aa5da172b7?q=80&w=1000') no-repeat center center/cover;
+    padding: 6rem 1rem;
+    text-align: center;
+    color: #ffffff;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+}
+
+.botao {
+    background-color: #52b788;
+    color: white;
+    padding: 0.8rem 2rem;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    display: inline-block;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.botao:hover {
+    background-color: #40916c;
+    transform: scale(1.05);
+}
+
+/* ==========================================
+   4. CONTEÚDO PRINCIPAL (GRID DE CARDS)
+   ========================================== */
+.conteudo {
+    max-width: 1100px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+}
+
+.titulo-secao {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    color: var(--verde-escuro);
+}
+
+.blocos-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.bloco {
+    background-color: var(--palha);
+    padding: 2rem;
+    border-radius: 12px;
+    border-left: 5px solid var(--verde-folha);
+    transition: transform 0.3s;
+}
+
+.bloco:hover {
+    transform: translateY(-5px);
+}
+
+.bloco h3 {
+    color: var(--verde-escuro);
+    margin-bottom: 0.8rem;
+}
+
+/* ==========================================
+   5. RODAPÉ
+   ========================================== */
+footer {
+    background-color: var(--verde-escuro);
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 4rem;
+    font-size: 0.9rem;
+}
+
+/* ==========================================
+   6. RESPONSIVIDADE (MEDIA QUERIES)
+   ========================================== */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+}
